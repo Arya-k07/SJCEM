@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dataset Autopilot Report - telecom_churn_leakage.csv</title>
+    <style>
+        :root {
+            --bg: #0f172a;
+            --card-bg: #1e293b;
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+            --border: #334155;
+            --accent: #38bdf8;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; }
+        body { background: #f8fafc; color: #1e293b; line-height: 1.6; padding: 32px 20px; }
+        .container { max-width: 1200px; margin: 0 auto; background: #ffffff; border-radius: 16px; box-shadow: 0 10px 25px -5px rgba(0,0,0,0.05); padding: 36px; border: 1px solid #e2e8f0; }
+        .header { display: flex; justify-content: space-between; align-items: center; border-bottom: 2px solid #f1f5f9; padding-bottom: 24px; margin-bottom: 28px; }
+        .brand { font-size: 26px; font-weight: 800; color: #0f172a; display: flex; align-items: center; gap: 8px; }
+        .brand span { color: #0284c7; }
+        .meta { color: #64748b; font-size: 14px; text-align: right; }
+        .scorecard { display: grid; grid-template-columns: 220px 1fr; gap: 24px; background: linear-gradient(135deg, #0f172a, #1e293b); color: #fff; padding: 28px; border-radius: 14px; margin-bottom: 32px; }
+        .score-circle { display: flex; flex-direction: column; align-items: center; justify-content: center; background: rgba(255,255,255,0.05); border: 3px solid #10b981; border-radius: 12px; padding: 20px; }
+        .score-num { font-size: 48px; font-weight: 900; color: #10b981; line-height: 1; }
+        .grade-badge { font-size: 18px; font-weight: 700; background: #10b981; color: #fff; padding: 2px 10px; border-radius: 6px; margin-top: 8px; }
+        .score-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-top: 16px; }
+        .score-item { background: rgba(255,255,255,0.06); padding: 12px; border-radius: 8px; text-align: center; }
+        .score-item-title { font-size: 12px; color: #94a3b8; text-transform: uppercase; letter-spacing: 0.05em; }
+        .score-item-val { font-size: 22px; font-weight: 700; color: #f8fafc; margin-top: 4px; }
+        .summary-box { background: #f8fafc; border-left: 4px solid #0284c7; padding: 16px 20px; border-radius: 6px; margin-bottom: 32px; font-size: 15px; color: #334155; }
+        h2 { font-size: 20px; color: #0f172a; margin-bottom: 16px; display: flex; align-items: center; gap: 8px; }
+        table { width: 100%; border-collapse: collapse; margin-bottom: 32px; font-size: 14px; }
+        th { background: #f1f5f9; text-align: left; padding: 12px 14px; font-weight: 700; color: #475569; border-bottom: 2px solid #e2e8f0; }
+        td { padding: 12px 14px; border-bottom: 1px solid #f1f5f9; vertical-align: top; }
+        tr:hover td { background: #fafafa; }
+        .badge { display: inline-block; padding: 3px 8px; border-radius: 4px; font-size: 11px; font-weight: 700; text-transform: uppercase; }
+        .badge-crit { background: #fee2e2; color: #dc2626; }
+        .badge-warn { background: #fef3c7; color: #d97706; }
+        .badge-info { background: #e0f2fe; color: #0284c7; }
+        code { background: #f1f5f9; padding: 2px 6px; border-radius: 4px; font-family: monospace; font-size: 13px; color: #0f172a; }
+        .footer { text-align: center; color: #94a3b8; font-size: 13px; border-top: 1px solid #f1f5f9; padding-top: 20px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="brand">🚀 Dataset <span>Autopilot</span></div>
+            <div class="meta">
+                <div><strong>Report ID:</strong> RPT-6F6B0264</div>
+                <div><strong>Dataset:</strong> telecom_churn_leakage.csv | 1,200 rows, 11 cols</div>
+                <div><strong>Generated:</strong> 2026-08-09 09:12:31 UTC</div>
+            </div>
+        </div>
+
+        <div class="scorecard">
+            <div class="score-circle">
+                <div class="score-num">85.5</div>
+                <div style="font-size:12px; color:#94a3b8; margin-top:2px;">DATA HEALTH SCORE</div>
+                <div class="grade-badge">GRADE A</div>
+            </div>
+            <div>
+                <h3 style="font-size:18px; margin-bottom:8px;">Executive Health Assessment</h3>
+                <p style="font-size:14px; color:#cbd5e1; line-height:1.5;">Dataset Autopilot audited 1,200 rows and 11 columns with overall Data Health Score of 85.5/100 (Grade: A). CRITICAL ATTENTION: 3 high-severity issue(s) identified that pose immediate risk to model integrity. Target Leakage: Features ['refund_issued_after_churn'] show suspicious predictive dominance or post-event properties. Distribution Drift: Significant shift (PSI >= 0.25) observed across 1 feature(s). Remediation Impact: Removing suspect leaky features caused baseline ROC-AUC to shift from 0.993 to 0.966 (Exclusion of ['refund_issued_after_churn'] maintained model performance at realistic baseline.).</p>
+                <div class="score-grid">
+                    <div class="score-item">
+                        <div class="score-item-title">Data Quality</div>
+                        <div class="score-item-val">70.0</div>
+                    </div>
+                    <div class="score-item">
+                        <div class="score-item-title">Target Leakage</div>
+                        <div class="score-item-val">85.0</div>
+                    </div>
+                    <div class="score-item">
+                        <div class="score-item-title">Distribution Drift</div>
+                        <div class="score-item-val">95.0</div>
+                    </div>
+                    <div class="score-item">
+                        <div class="score-item-title">Slice Fairness</div>
+                        <div class="score-item-val">100.0</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <h2>🔍 Audit Findings & Actionable Recommendations (4)</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th style="width:70px;">ID</th>
+                    <th style="width:90px;">Severity</th>
+                    <th style="width:140px;">Category</th>
+                    <th style="width:130px;">Column</th>
+                    <th>Details & Remediation</th>
+                </tr>
+            </thead>
+            <tbody>
+                
+        <tr>
+            <td><code>F-Q101</code></td>
+            <td><span class="badge badge-crit">CRITICAL</span></td>
+            <td><strong>Missingness</strong></td>
+            <td><code>total_charges</code></td>
+            <td>
+                <div style="font-weight:600; margin-bottom:4px;">Informative Missing Values in 'total_charges'</div>
+                <div style="font-size:13px; color:#475569;">Column 'total_charges' is missing in 161 rows (13.4%). Missingness is non-random (informative) and correlates with other variables.</div>
+                <div style="margin-top:6px; font-size:12px; color:#0f766e; background:#f0fdfa; padding:4px 8px; border-radius:4px; border-left:3px solid #0d9488;">
+                    <strong>Recommendation:</strong> Use missing-indicator encoding + group-based imputation to preserve signal without introducing bias.
+                </div>
+            </td>
+        </tr>
+        
+        <tr>
+            <td><code>F-Q102</code></td>
+            <td><span class="badge badge-crit">CRITICAL</span></td>
+            <td><strong>Missingness</strong></td>
+            <td><code>cancellation_survey_score</code></td>
+            <td>
+                <div style="font-weight:600; margin-bottom:4px;">Informative Missing Values in 'cancellation_survey_score'</div>
+                <div style="font-size:13px; color:#475569;">Column 'cancellation_survey_score' is missing in 814 rows (67.8%). Missingness is non-random (informative) and correlates with other variables.</div>
+                <div style="margin-top:6px; font-size:12px; color:#0f766e; background:#f0fdfa; padding:4px 8px; border-radius:4px; border-left:3px solid #0d9488;">
+                    <strong>Recommendation:</strong> Use missing-indicator encoding + group-based imputation to preserve signal without introducing bias.
+                </div>
+            </td>
+        </tr>
+        
+        <tr>
+            <td><code>F-L201</code></td>
+            <td><span class="badge badge-crit">CRITICAL</span></td>
+            <td><strong>Target Leakage</strong></td>
+            <td><code>refund_issued_after_churn</code></td>
+            <td>
+                <div style="font-weight:600; margin-bottom:4px;">Target Leakage Risk in Feature: 'refund_issued_after_churn'</div>
+                <div style="font-size:13px; color:#475569;">Feature 'refund_issued_after_churn' exhibits near-perfect predictive dominance (Single-feature AUC is exceptionally high (0.947 >= 0.94); Extreme correlation with target (|r| = 0.908); Feature name matches post-event semantic pattern ('refund_issued_after_churn')). In production, this information is likely unavailable at inference time.</div>
+                <div style="margin-top:6px; font-size:12px; color:#0f766e; background:#f0fdfa; padding:4px 8px; border-radius:4px; border-left:3px solid #0d9488;">
+                    <strong>Recommendation:</strong> Exclude 'refund_issued_after_churn' from training set or verify if this measurement is strictly recorded prior to the target event.
+                </div>
+            </td>
+        </tr>
+        
+        <tr>
+            <td><code>F-D301</code></td>
+            <td><span class="badge badge-warn">WARNING</span></td>
+            <td><strong>Distribution Drift</strong></td>
+            <td><code>cancellation_survey_score</code></td>
+            <td>
+                <div style="font-weight:600; margin-bottom:4px;">Moderate Distribution Drift in 'cancellation_survey_score' (PSI=0.126)</div>
+                <div style="font-size:13px; color:#475569;">Feature 'cancellation_survey_score' exhibits significant distribution shift (PSI = 0.126, threshold = 0.25). Sequential Index Partition (70% Baseline / 30% Evaluation).</div>
+                <div style="margin-top:6px; font-size:12px; color:#0f766e; background:#f0fdfa; padding:4px 8px; border-radius:4px; border-left:3px solid #0d9488;">
+                    <strong>Recommendation:</strong> Implement covariate shift adaptation, sample reweighting, or retrain models using time-decayed sample weights for 'cancellation_survey_score'.
+                </div>
+            </td>
+        </tr>
+        
+            </tbody>
+        </table>
+
+        <h2>🧪 Controlled Remediation Experiments (3)</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th style="width:80px;">ID</th>
+                    <th>Experiment Name</th>
+                    <th>Oracle Model</th>
+                    <th>Metric</th>
+                    <th>Baseline</th>
+                    <th>Modified</th>
+                    <th>Impact (Δ)</th>
+                    <th>Empirical Outcome</th>
+                </tr>
+            </thead>
+            <tbody>
+                
+        <tr>
+            <td><code>EXP-001</code></td>
+            <td><strong>Baseline Model Benchmark</strong><br><small style="color:#64748b;">Controlled baseline Random Forest model evaluated with stratified K-Fold cross-validation.</small></td>
+            <td>RandomForest (CV=5)</td>
+            <td>ROC-AUC</td>
+            <td>0.993</td>
+            <td>0.993</td>
+            <td style="color:#64748b; font-weight:bold;">+0.000 (+0.0%)</td>
+            <td><em>Reference benchmark score prior to applying remediations.</em></td>
+        </tr>
+        
+        <tr>
+            <td><code>EXP-002</code></td>
+            <td><strong>Remove Leaky Features</strong><br><small style="color:#64748b;">Retrain baseline excluding detected leaky feature(s): refund_issued_after_churn.</small></td>
+            <td>RandomForest (CV=5)</td>
+            <td>ROC-AUC</td>
+            <td>0.993</td>
+            <td>0.966</td>
+            <td style="color:#ef4444; font-weight:bold;">-0.028 (-2.8%)</td>
+            <td><em>Exclusion of ['refund_issued_after_churn'] maintained model performance at realistic baseline.</em></td>
+        </tr>
+        
+        <tr>
+            <td><code>EXP-003</code></td>
+            <td><strong>Imputation Strategy: Mean vs Median</strong><br><small style="color:#64748b;">Evaluate model sensitivity to mean vs robust median imputation.</small></td>
+            <td>RandomForest (CV=5)</td>
+            <td>ROC-AUC</td>
+            <td>0.966</td>
+            <td>1.000</td>
+            <td style="color:#10b981; font-weight:bold;">+0.034 (+3.6%)</td>
+            <td><em>Comparing Mean vs Median imputation across missing columns ['total_charges', 'cancellation_survey_score'].</em></td>
+        </tr>
+        
+            </tbody>
+        </table>
+
+        <div class="footer">
+            Generated autonomously by Dataset Autopilot Engine • Scikit-learn Oracle Benchmarking
+        </div>
+    </div>
+</body>
+</html>

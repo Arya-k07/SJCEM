@@ -1,0 +1,2103 @@
+{
+  "report_id": "RPT-6F6B0264",
+  "dataset_name": "telecom_churn_leakage.csv",
+  "created_at": "2026-08-09 09:12:31 UTC",
+  "health_score": 85.5,
+  "health_grade": "A",
+  "score_breakdown": {
+    "overall_score": 85.5,
+    "quality_score": 70.0,
+    "leakage_score": 85.0,
+    "drift_score": 95.0,
+    "fairness_score": 100.0,
+    "grade": "A"
+  },
+  "dataset_profile": {
+    "rows": 1200,
+    "columns": 11,
+    "duplicate_rows": 0,
+    "duplicate_pct": 0.0,
+    "memory_bytes": 284926,
+    "columns_profile": {
+      "customer_id": {
+        "name": "customer_id",
+        "dtype": "object",
+        "inferred_role": "id_candidate",
+        "semantic_type": "generic_text",
+        "missing_count": 0,
+        "missing_pct": 0.0,
+        "unique_count": 1200,
+        "unique_ratio": 1.0,
+        "min": null,
+        "max": null,
+        "mean": null,
+        "median": null,
+        "std": null,
+        "p5": null,
+        "p25": null,
+        "p75": null,
+        "p95": null,
+        "skewness": null,
+        "kurtosis": null,
+        "top_values": [
+          {
+            "value": "CUST-11183",
+            "count": 1,
+            "pct": 0.0008
+          },
+          {
+            "value": "CUST-11182",
+            "count": 1,
+            "pct": 0.0008
+          },
+          {
+            "value": "CUST-11181",
+            "count": 1,
+            "pct": 0.0008
+          },
+          {
+            "value": "CUST-11180",
+            "count": 1,
+            "pct": 0.0008
+          },
+          {
+            "value": "CUST-11179",
+            "count": 1,
+            "pct": 0.0008
+          },
+          {
+            "value": "CUST-11178",
+            "count": 1,
+            "pct": 0.0008
+          },
+          {
+            "value": "CUST-11177",
+            "count": 1,
+            "pct": 0.0008
+          },
+          {
+            "value": "CUST-11176",
+            "count": 1,
+            "pct": 0.0008
+          },
+          {
+            "value": "CUST-11175",
+            "count": 1,
+            "pct": 0.0008
+          },
+          {
+            "value": "CUST-11174",
+            "count": 1,
+            "pct": 0.0008
+          }
+        ],
+        "histogram": [],
+        "is_constant": false,
+        "is_id": true,
+        "sample_values": [
+          "CUST-10000",
+          "CUST-10001",
+          "CUST-10002",
+          "CUST-10003",
+          "CUST-10004"
+        ]
+      },
+      "gender": {
+        "name": "gender",
+        "dtype": "object",
+        "inferred_role": "categorical_feature",
+        "semantic_type": "generic_categorical",
+        "missing_count": 0,
+        "missing_pct": 0.0,
+        "unique_count": 2,
+        "unique_ratio": 0.0017,
+        "min": null,
+        "max": null,
+        "mean": null,
+        "median": null,
+        "std": null,
+        "p5": null,
+        "p25": null,
+        "p75": null,
+        "p95": null,
+        "skewness": null,
+        "kurtosis": null,
+        "top_values": [
+          {
+            "value": "Male",
+            "count": 601,
+            "pct": 0.5008
+          },
+          {
+            "value": "Female",
+            "count": 599,
+            "pct": 0.4992
+          }
+        ],
+        "histogram": [],
+        "is_constant": false,
+        "is_id": false,
+        "sample_values": [
+          "Male",
+          "Female"
+        ]
+      },
+      "age": {
+        "name": "age",
+        "dtype": "int64",
+        "inferred_role": "numeric_feature",
+        "semantic_type": "generic_numeric",
+        "missing_count": 0,
+        "missing_pct": 0.0,
+        "unique_count": 57,
+        "unique_ratio": 0.0475,
+        "min": 18.0,
+        "max": 74.0,
+        "mean": 46.1883,
+        "median": 46.0,
+        "std": 16.2724,
+        "p5": 21.0,
+        "p25": 32.0,
+        "p75": 60.0,
+        "p95": 72.0,
+        "skewness": -0.0181,
+        "kurtosis": -1.1718,
+        "top_values": [
+          {
+            "value": "64",
+            "count": 32,
+            "pct": 0.0267
+          },
+          {
+            "value": "43",
+            "count": 31,
+            "pct": 0.0258
+          },
+          {
+            "value": "46",
+            "count": 31,
+            "pct": 0.0258
+          },
+          {
+            "value": "57",
+            "count": 28,
+            "pct": 0.0233
+          },
+          {
+            "value": "34",
+            "count": 28,
+            "pct": 0.0233
+          },
+          {
+            "value": "54",
+            "count": 27,
+            "pct": 0.0225
+          },
+          {
+            "value": "42",
+            "count": 27,
+            "pct": 0.0225
+          },
+          {
+            "value": "51",
+            "count": 27,
+            "pct": 0.0225
+          },
+          {
+            "value": "68",
+            "count": 27,
+            "pct": 0.0225
+          },
+          {
+            "value": "62",
+            "count": 26,
+            "pct": 0.0217
+          }
+        ],
+        "histogram": [
+          {
+            "bin_start": 18.0,
+            "bin_end": 23.6,
+            "count": 122,
+            "pct": 0.1017
+          },
+          {
+            "bin_start": 23.6,
+            "bin_end": 29.2,
+            "count": 124,
+            "pct": 0.1033
+          },
+          {
+            "bin_start": 29.2,
+            "bin_end": 34.8,
+            "count": 103,
+            "pct": 0.0858
+          },
+          {
+            "bin_start": 34.8,
+            "bin_end": 40.4,
+            "count": 116,
+            "pct": 0.0967
+          },
+          {
+            "bin_start": 40.4,
+            "bin_end": 46.0,
+            "count": 112,
+            "pct": 0.0933
+          },
+          {
+            "bin_start": 46.0,
+            "bin_end": 51.6,
+            "count": 138,
+            "pct": 0.115
+          },
+          {
+            "bin_start": 51.6,
+            "bin_end": 57.2,
+            "count": 136,
+            "pct": 0.1133
+          },
+          {
+            "bin_start": 57.2,
+            "bin_end": 62.8,
+            "count": 98,
+            "pct": 0.0817
+          },
+          {
+            "bin_start": 62.8,
+            "bin_end": 68.4,
+            "count": 131,
+            "pct": 0.1092
+          },
+          {
+            "bin_start": 68.4,
+            "bin_end": 74.0,
+            "count": 120,
+            "pct": 0.1
+          }
+        ],
+        "is_constant": false,
+        "is_id": false,
+        "sample_values": [
+          "22",
+          "35",
+          "45",
+          "59",
+          "39"
+        ]
+      },
+      "tenure_months": {
+        "name": "tenure_months",
+        "dtype": "int64",
+        "inferred_role": "numeric_feature",
+        "semantic_type": "generic_numeric",
+        "missing_count": 0,
+        "missing_pct": 0.0,
+        "unique_count": 71,
+        "unique_ratio": 0.0592,
+        "min": 1.0,
+        "max": 71.0,
+        "mean": 34.9483,
+        "median": 35.0,
+        "std": 20.3414,
+        "p5": 4.0,
+        "p25": 17.75,
+        "p75": 52.0,
+        "p95": 68.0,
+        "skewness": 0.0689,
+        "kurtosis": -1.1752,
+        "top_values": [
+          {
+            "value": "21",
+            "count": 34,
+            "pct": 0.0283
+          },
+          {
+            "value": "8",
+            "count": 27,
+            "pct": 0.0225
+          },
+          {
+            "value": "60",
+            "count": 24,
+            "pct": 0.02
+          },
+          {
+            "value": "70",
+            "count": 23,
+            "pct": 0.0192
+          },
+          {
+            "value": "49",
+            "count": 22,
+            "pct": 0.0183
+          },
+          {
+            "value": "33",
+            "count": 22,
+            "pct": 0.0183
+          },
+          {
+            "value": "19",
+            "count": 22,
+            "pct": 0.0183
+          },
+          {
+            "value": "47",
+            "count": 22,
+            "pct": 0.0183
+          },
+          {
+            "value": "35",
+            "count": 21,
+            "pct": 0.0175
+          },
+          {
+            "value": "30",
+            "count": 21,
+            "pct": 0.0175
+          }
+        ],
+        "histogram": [
+          {
+            "bin_start": 1.0,
+            "bin_end": 8.0,
+            "count": 118,
+            "pct": 0.0983
+          },
+          {
+            "bin_start": 8.0,
+            "bin_end": 15.0,
+            "count": 130,
+            "pct": 0.1083
+          },
+          {
+            "bin_start": 15.0,
+            "bin_end": 22.0,
+            "count": 139,
+            "pct": 0.1158
+          },
+          {
+            "bin_start": 22.0,
+            "bin_end": 29.0,
+            "count": 110,
+            "pct": 0.0917
+          },
+          {
+            "bin_start": 29.0,
+            "bin_end": 36.0,
+            "count": 121,
+            "pct": 0.1008
+          },
+          {
+            "bin_start": 36.0,
+            "bin_end": 43.0,
+            "count": 118,
+            "pct": 0.0983
+          },
+          {
+            "bin_start": 43.0,
+            "bin_end": 50.0,
+            "count": 129,
+            "pct": 0.1075
+          },
+          {
+            "bin_start": 50.0,
+            "bin_end": 57.0,
+            "count": 100,
+            "pct": 0.0833
+          },
+          {
+            "bin_start": 57.0,
+            "bin_end": 64.0,
+            "count": 113,
+            "pct": 0.0942
+          },
+          {
+            "bin_start": 64.0,
+            "bin_end": 71.0,
+            "count": 122,
+            "pct": 0.1017
+          }
+        ],
+        "is_constant": false,
+        "is_id": false,
+        "sample_values": [
+          "33",
+          "41",
+          "8",
+          "11",
+          "51"
+        ]
+      },
+      "monthly_charges": {
+        "name": "monthly_charges",
+        "dtype": "float64",
+        "inferred_role": "numeric_feature",
+        "semantic_type": "generic_numeric",
+        "missing_count": 0,
+        "missing_pct": 0.0,
+        "unique_count": 1133,
+        "unique_ratio": 0.9442,
+        "min": 20.0,
+        "max": 119.89,
+        "mean": 70.0118,
+        "median": 70.16,
+        "std": 28.9428,
+        "p5": 24.8135,
+        "p25": 45.735,
+        "p75": 94.895,
+        "p95": 115.2915,
+        "skewness": -0.0211,
+        "kurtosis": -1.1955,
+        "top_values": [
+          {
+            "value": "48.25",
+            "count": 3,
+            "pct": 0.0025
+          },
+          {
+            "value": "93.79",
+            "count": 3,
+            "pct": 0.0025
+          },
+          {
+            "value": "21.91",
+            "count": 3,
+            "pct": 0.0025
+          },
+          {
+            "value": "44.15",
+            "count": 3,
+            "pct": 0.0025
+          },
+          {
+            "value": "26.9",
+            "count": 2,
+            "pct": 0.0017
+          },
+          {
+            "value": "71.8",
+            "count": 2,
+            "pct": 0.0017
+          },
+          {
+            "value": "26.25",
+            "count": 2,
+            "pct": 0.0017
+          },
+          {
+            "value": "117.31",
+            "count": 2,
+            "pct": 0.0017
+          },
+          {
+            "value": "57.17",
+            "count": 2,
+            "pct": 0.0017
+          },
+          {
+            "value": "27.1",
+            "count": 2,
+            "pct": 0.0017
+          }
+        ],
+        "histogram": [
+          {
+            "bin_start": 20.0,
+            "bin_end": 29.989,
+            "count": 128,
+            "pct": 0.1067
+          },
+          {
+            "bin_start": 29.989,
+            "bin_end": 39.978,
+            "count": 103,
+            "pct": 0.0858
+          },
+          {
+            "bin_start": 39.978,
+            "bin_end": 49.967,
+            "count": 133,
+            "pct": 0.1108
+          },
+          {
+            "bin_start": 49.967,
+            "bin_end": 59.956,
+            "count": 121,
+            "pct": 0.1008
+          },
+          {
+            "bin_start": 59.956,
+            "bin_end": 69.945,
+            "count": 110,
+            "pct": 0.0917
+          },
+          {
+            "bin_start": 69.945,
+            "bin_end": 79.934,
+            "count": 112,
+            "pct": 0.0933
+          },
+          {
+            "bin_start": 79.934,
+            "bin_end": 89.923,
+            "count": 129,
+            "pct": 0.1075
+          },
+          {
+            "bin_start": 89.923,
+            "bin_end": 99.912,
+            "count": 129,
+            "pct": 0.1075
+          },
+          {
+            "bin_start": 99.912,
+            "bin_end": 109.901,
+            "count": 120,
+            "pct": 0.1
+          },
+          {
+            "bin_start": 109.901,
+            "bin_end": 119.89,
+            "count": 115,
+            "pct": 0.0958
+          }
+        ],
+        "is_constant": false,
+        "is_id": false,
+        "sample_values": [
+          "65.62",
+          "56.91",
+          "32.1",
+          "61.89",
+          "95.12"
+        ]
+      },
+      "total_charges": {
+        "name": "total_charges",
+        "dtype": "float64",
+        "inferred_role": "numeric_feature",
+        "semantic_type": "generic_numeric",
+        "missing_count": 161,
+        "missing_pct": 0.1342,
+        "unique_count": 1039,
+        "unique_ratio": 0.8658,
+        "min": 6.46,
+        "max": 8108.71,
+        "mean": 2446.6841,
+        "median": 1982.11,
+        "std": 1855.2431,
+        "p5": 216.188,
+        "p25": 946.375,
+        "p75": 3676.8,
+        "p95": 6043.455,
+        "skewness": 0.8223,
+        "kurtosis": -0.1196,
+        "top_values": [
+          {
+            "value": "2924.31",
+            "count": 1,
+            "pct": 0.0008
+          },
+          {
+            "value": "2331.09",
+            "count": 1,
+            "pct": 0.0008
+          },
+          {
+            "value": "274.49",
+            "count": 1,
+            "pct": 0.0008
+          },
+          {
+            "value": "661.2",
+            "count": 1,
+            "pct": 0.0008
+          },
+          {
+            "value": "4852.6",
+            "count": 1,
+            "pct": 0.0008
+          },
+          {
+            "value": "1107.76",
+            "count": 1,
+            "pct": 0.0008
+          },
+          {
+            "value": "471.02",
+            "count": 1,
+            "pct": 0.0008
+          },
+          {
+            "value": "3651.29",
+            "count": 1,
+            "pct": 0.0008
+          },
+          {
+            "value": "1741.52",
+            "count": 1,
+            "pct": 0.0008
+          },
+          {
+            "value": "1861.49",
+            "count": 1,
+            "pct": 0.0008
+          }
+        ],
+        "histogram": [
+          {
+            "bin_start": 6.46,
+            "bin_end": 816.685,
+            "count": 224,
+            "pct": 0.2156
+          },
+          {
+            "bin_start": 816.685,
+            "bin_end": 1626.91,
+            "count": 217,
+            "pct": 0.2089
+          },
+          {
+            "bin_start": 1626.91,
+            "bin_end": 2437.135,
+            "count": 173,
+            "pct": 0.1665
+          },
+          {
+            "bin_start": 2437.135,
+            "bin_end": 3247.36,
+            "count": 110,
+            "pct": 0.1059
+          },
+          {
+            "bin_start": 3247.36,
+            "bin_end": 4057.585,
+            "count": 99,
+            "pct": 0.0953
+          },
+          {
+            "bin_start": 4057.585,
+            "bin_end": 4867.81,
+            "count": 83,
+            "pct": 0.0799
+          },
+          {
+            "bin_start": 4867.81,
+            "bin_end": 5678.035,
+            "count": 62,
+            "pct": 0.0597
+          },
+          {
+            "bin_start": 5678.035,
+            "bin_end": 6488.26,
+            "count": 36,
+            "pct": 0.0346
+          },
+          {
+            "bin_start": 6488.26,
+            "bin_end": 7298.485,
+            "count": 22,
+            "pct": 0.0212
+          },
+          {
+            "bin_start": 7298.485,
+            "bin_end": 8108.71,
+            "count": 13,
+            "pct": 0.0125
+          }
+        ],
+        "is_constant": false,
+        "is_id": false,
+        "sample_values": [
+          "2331.09",
+          "274.49",
+          "661.2",
+          "4852.6",
+          "1107.76"
+        ]
+      },
+      "contract_type": {
+        "name": "contract_type",
+        "dtype": "object",
+        "inferred_role": "categorical_feature",
+        "semantic_type": "generic_categorical",
+        "missing_count": 0,
+        "missing_pct": 0.0,
+        "unique_count": 3,
+        "unique_ratio": 0.0025,
+        "min": null,
+        "max": null,
+        "mean": null,
+        "median": null,
+        "std": null,
+        "p5": null,
+        "p25": null,
+        "p75": null,
+        "p95": null,
+        "skewness": null,
+        "kurtosis": null,
+        "top_values": [
+          {
+            "value": "Month-to-Month",
+            "count": 666,
+            "pct": 0.555
+          },
+          {
+            "value": "One-Year",
+            "count": 301,
+            "pct": 0.2508
+          },
+          {
+            "value": "Two-Year",
+            "count": 233,
+            "pct": 0.1942
+          }
+        ],
+        "histogram": [],
+        "is_constant": false,
+        "is_id": false,
+        "sample_values": [
+          "Month-to-Month",
+          "One-Year",
+          "Two-Year"
+        ]
+      },
+      "tech_support_calls": {
+        "name": "tech_support_calls",
+        "dtype": "int64",
+        "inferred_role": "numeric_feature",
+        "semantic_type": "generic_numeric",
+        "missing_count": 0,
+        "missing_pct": 0.0,
+        "unique_count": 7,
+        "unique_ratio": 0.0058,
+        "min": 0.0,
+        "max": 6.0,
+        "mean": 1.4308,
+        "median": 1.0,
+        "std": 1.1524,
+        "p5": 0.0,
+        "p25": 1.0,
+        "p75": 2.0,
+        "p95": 3.0,
+        "skewness": 0.7572,
+        "kurtosis": 0.5905,
+        "top_values": [
+          {
+            "value": "1",
+            "count": 410,
+            "pct": 0.3417
+          },
+          {
+            "value": "2",
+            "count": 317,
+            "pct": 0.2642
+          },
+          {
+            "value": "0",
+            "count": 274,
+            "pct": 0.2283
+          },
+          {
+            "value": "3",
+            "count": 142,
+            "pct": 0.1183
+          },
+          {
+            "value": "4",
+            "count": 43,
+            "pct": 0.0358
+          },
+          {
+            "value": "5",
+            "count": 9,
+            "pct": 0.0075
+          },
+          {
+            "value": "6",
+            "count": 5,
+            "pct": 0.0042
+          }
+        ],
+        "histogram": [
+          {
+            "bin_start": 0.0,
+            "bin_end": 0.6,
+            "count": 274,
+            "pct": 0.2283
+          },
+          {
+            "bin_start": 0.6,
+            "bin_end": 1.2,
+            "count": 410,
+            "pct": 0.3417
+          },
+          {
+            "bin_start": 1.2,
+            "bin_end": 1.8,
+            "count": 0,
+            "pct": 0.0
+          },
+          {
+            "bin_start": 1.8,
+            "bin_end": 2.4,
+            "count": 317,
+            "pct": 0.2642
+          },
+          {
+            "bin_start": 2.4,
+            "bin_end": 3.0,
+            "count": 0,
+            "pct": 0.0
+          },
+          {
+            "bin_start": 3.0,
+            "bin_end": 3.6,
+            "count": 142,
+            "pct": 0.1183
+          },
+          {
+            "bin_start": 3.6,
+            "bin_end": 4.2,
+            "count": 43,
+            "pct": 0.0358
+          },
+          {
+            "bin_start": 4.2,
+            "bin_end": 4.8,
+            "count": 0,
+            "pct": 0.0
+          },
+          {
+            "bin_start": 4.8,
+            "bin_end": 5.4,
+            "count": 9,
+            "pct": 0.0075
+          },
+          {
+            "bin_start": 5.4,
+            "bin_end": 6.0,
+            "count": 5,
+            "pct": 0.0042
+          }
+        ],
+        "is_constant": false,
+        "is_id": false,
+        "sample_values": [
+          "1",
+          "2",
+          "0",
+          "3",
+          "6"
+        ]
+      },
+      "refund_issued_after_churn": {
+        "name": "refund_issued_after_churn",
+        "dtype": "int64",
+        "inferred_role": "categorical_feature",
+        "semantic_type": "boolean",
+        "missing_count": 0,
+        "missing_pct": 0.0,
+        "unique_count": 2,
+        "unique_ratio": 0.0017,
+        "min": 0.0,
+        "max": 1.0,
+        "mean": 0.305,
+        "median": 0.0,
+        "std": 0.4606,
+        "p5": 0.0,
+        "p25": 0.0,
+        "p75": 1.0,
+        "p95": 1.0,
+        "skewness": 0.8481,
+        "kurtosis": -1.2828,
+        "top_values": [
+          {
+            "value": "0",
+            "count": 834,
+            "pct": 0.695
+          },
+          {
+            "value": "1",
+            "count": 366,
+            "pct": 0.305
+          }
+        ],
+        "histogram": [
+          {
+            "bin_start": 0.0,
+            "bin_end": 0.1,
+            "count": 834,
+            "pct": 0.695
+          },
+          {
+            "bin_start": 0.1,
+            "bin_end": 0.2,
+            "count": 0,
+            "pct": 0.0
+          },
+          {
+            "bin_start": 0.2,
+            "bin_end": 0.3,
+            "count": 0,
+            "pct": 0.0
+          },
+          {
+            "bin_start": 0.3,
+            "bin_end": 0.4,
+            "count": 0,
+            "pct": 0.0
+          },
+          {
+            "bin_start": 0.4,
+            "bin_end": 0.5,
+            "count": 0,
+            "pct": 0.0
+          },
+          {
+            "bin_start": 0.5,
+            "bin_end": 0.6,
+            "count": 0,
+            "pct": 0.0
+          },
+          {
+            "bin_start": 0.6,
+            "bin_end": 0.7,
+            "count": 0,
+            "pct": 0.0
+          },
+          {
+            "bin_start": 0.7,
+            "bin_end": 0.8,
+            "count": 0,
+            "pct": 0.0
+          },
+          {
+            "bin_start": 0.8,
+            "bin_end": 0.9,
+            "count": 0,
+            "pct": 0.0
+          },
+          {
+            "bin_start": 0.9,
+            "bin_end": 1.0,
+            "count": 366,
+            "pct": 0.305
+          }
+        ],
+        "is_constant": false,
+        "is_id": false,
+        "sample_values": [
+          "0",
+          "1"
+        ]
+      },
+      "cancellation_survey_score": {
+        "name": "cancellation_survey_score",
+        "dtype": "float64",
+        "inferred_role": "numeric_feature",
+        "semantic_type": "generic_numeric",
+        "missing_count": 814,
+        "missing_pct": 0.6783,
+        "unique_count": 20,
+        "unique_ratio": 0.0167,
+        "min": 0.2,
+        "max": 2.6,
+        "mean": 1.1865,
+        "median": 1.1,
+        "std": 0.379,
+        "p5": 0.6,
+        "p25": 0.9,
+        "p75": 1.4,
+        "p95": 1.8,
+        "skewness": 0.2385,
+        "kurtosis": 0.0667,
+        "top_values": [
+          {
+            "value": "1.1",
+            "count": 56,
+            "pct": 0.0467
+          },
+          {
+            "value": "0.9",
+            "count": 46,
+            "pct": 0.0383
+          },
+          {
+            "value": "1.4",
+            "count": 37,
+            "pct": 0.0308
+          },
+          {
+            "value": "1.3",
+            "count": 37,
+            "pct": 0.0308
+          },
+          {
+            "value": "1.5",
+            "count": 29,
+            "pct": 0.0242
+          },
+          {
+            "value": "1.2",
+            "count": 25,
+            "pct": 0.0208
+          },
+          {
+            "value": "0.8",
+            "count": 25,
+            "pct": 0.0208
+          },
+          {
+            "value": "1.6",
+            "count": 22,
+            "pct": 0.0183
+          },
+          {
+            "value": "1.0",
+            "count": 21,
+            "pct": 0.0175
+          },
+          {
+            "value": "0.7",
+            "count": 19,
+            "pct": 0.0158
+          }
+        ],
+        "histogram": [
+          {
+            "bin_start": 0.2,
+            "bin_end": 0.44,
+            "count": 5,
+            "pct": 0.013
+          },
+          {
+            "bin_start": 0.44,
+            "bin_end": 0.68,
+            "count": 22,
+            "pct": 0.057
+          },
+          {
+            "bin_start": 0.68,
+            "bin_end": 0.92,
+            "count": 90,
+            "pct": 0.2332
+          },
+          {
+            "bin_start": 0.92,
+            "bin_end": 1.16,
+            "count": 77,
+            "pct": 0.1995
+          },
+          {
+            "bin_start": 1.16,
+            "bin_end": 1.4,
+            "count": 62,
+            "pct": 0.1606
+          },
+          {
+            "bin_start": 1.4,
+            "bin_end": 1.64,
+            "count": 88,
+            "pct": 0.228
+          },
+          {
+            "bin_start": 1.64,
+            "bin_end": 1.88,
+            "count": 25,
+            "pct": 0.0648
+          },
+          {
+            "bin_start": 1.88,
+            "bin_end": 2.12,
+            "count": 13,
+            "pct": 0.0337
+          },
+          {
+            "bin_start": 2.12,
+            "bin_end": 2.36,
+            "count": 3,
+            "pct": 0.0078
+          },
+          {
+            "bin_start": 2.36,
+            "bin_end": 2.6,
+            "count": 1,
+            "pct": 0.0026
+          }
+        ],
+        "is_constant": false,
+        "is_id": false,
+        "sample_values": [
+          "0.6",
+          "1.3",
+          "0.9",
+          "1.9",
+          "1.4"
+        ]
+      },
+      "churn": {
+        "name": "churn",
+        "dtype": "int64",
+        "inferred_role": "target",
+        "semantic_type": "boolean",
+        "missing_count": 0,
+        "missing_pct": 0.0,
+        "unique_count": 2,
+        "unique_ratio": 0.0017,
+        "min": 0.0,
+        "max": 1.0,
+        "mean": 0.3217,
+        "median": 0.0,
+        "std": 0.4673,
+        "p5": 0.0,
+        "p25": 0.0,
+        "p75": 1.0,
+        "p95": 1.0,
+        "skewness": 0.7645,
+        "kurtosis": -1.4179,
+        "top_values": [
+          {
+            "value": "0",
+            "count": 814,
+            "pct": 0.6783
+          },
+          {
+            "value": "1",
+            "count": 386,
+            "pct": 0.3217
+          }
+        ],
+        "histogram": [
+          {
+            "bin_start": 0.0,
+            "bin_end": 0.1,
+            "count": 814,
+            "pct": 0.6783
+          },
+          {
+            "bin_start": 0.1,
+            "bin_end": 0.2,
+            "count": 0,
+            "pct": 0.0
+          },
+          {
+            "bin_start": 0.2,
+            "bin_end": 0.3,
+            "count": 0,
+            "pct": 0.0
+          },
+          {
+            "bin_start": 0.3,
+            "bin_end": 0.4,
+            "count": 0,
+            "pct": 0.0
+          },
+          {
+            "bin_start": 0.4,
+            "bin_end": 0.5,
+            "count": 0,
+            "pct": 0.0
+          },
+          {
+            "bin_start": 0.5,
+            "bin_end": 0.6,
+            "count": 0,
+            "pct": 0.0
+          },
+          {
+            "bin_start": 0.6,
+            "bin_end": 0.7,
+            "count": 0,
+            "pct": 0.0
+          },
+          {
+            "bin_start": 0.7,
+            "bin_end": 0.8,
+            "count": 0,
+            "pct": 0.0
+          },
+          {
+            "bin_start": 0.8,
+            "bin_end": 0.9,
+            "count": 0,
+            "pct": 0.0
+          },
+          {
+            "bin_start": 0.9,
+            "bin_end": 1.0,
+            "count": 386,
+            "pct": 0.3217
+          }
+        ],
+        "is_constant": false,
+        "is_id": false,
+        "sample_values": [
+          "0",
+          "1"
+        ]
+      }
+    },
+    "detected_target": "churn",
+    "target_type": "binary_classification"
+  },
+  "findings": [
+    {
+      "id": "F-Q101",
+      "type": "missingness",
+      "severity": "CRITICAL",
+      "column": "total_charges",
+      "title": "Informative Missing Values in 'total_charges'",
+      "description": "Column 'total_charges' is missing in 161 rows (13.4%). Missingness is non-random (informative) and correlates with other variables.",
+      "evidence": {
+        "missing_count": 161,
+        "missing_pct": 0.1342,
+        "is_informative": true,
+        "feature_association": {
+          "feature": "contract_type",
+          "cramers_v": 0.3503
+        }
+      },
+      "recommendation": "Use missing-indicator encoding + group-based imputation to preserve signal without introducing bias.",
+      "confidence": 0.95,
+      "ai_summary": null
+    },
+    {
+      "id": "F-Q102",
+      "type": "missingness",
+      "severity": "CRITICAL",
+      "column": "cancellation_survey_score",
+      "title": "Informative Missing Values in 'cancellation_survey_score'",
+      "description": "Column 'cancellation_survey_score' is missing in 814 rows (67.8%). Missingness is non-random (informative) and correlates with other variables.",
+      "evidence": {
+        "missing_count": 814,
+        "missing_pct": 0.6783,
+        "is_informative": true,
+        "target_association": {
+          "target": "churn",
+          "correlation": -1.0,
+          "p_value": 0.0
+        },
+        "feature_association": {
+          "feature": "refund_issued_after_churn",
+          "cramers_v": 0.9057
+        }
+      },
+      "recommendation": "Use missing-indicator encoding + group-based imputation to preserve signal without introducing bias.",
+      "confidence": 0.95,
+      "ai_summary": null
+    },
+    {
+      "id": "F-L201",
+      "type": "target_leakage",
+      "severity": "CRITICAL",
+      "column": "refund_issued_after_churn",
+      "title": "Target Leakage Risk in Feature: 'refund_issued_after_churn'",
+      "description": "Feature 'refund_issued_after_churn' exhibits near-perfect predictive dominance (Single-feature AUC is exceptionally high (0.947 >= 0.94); Extreme correlation with target (|r| = 0.908); Feature name matches post-event semantic pattern ('refund_issued_after_churn')). In production, this information is likely unavailable at inference time.",
+      "evidence": {
+        "single_feature_metric": "AUC",
+        "single_feature_score": 0.9474,
+        "correlation_with_target": 0.9078,
+        "post_event_name_match": true,
+        "reasons": [
+          "Single-feature AUC is exceptionally high (0.947 >= 0.94)",
+          "Extreme correlation with target (|r| = 0.908)",
+          "Feature name matches post-event semantic pattern ('refund_issued_after_churn')"
+        ]
+      },
+      "recommendation": "Exclude 'refund_issued_after_churn' from training set or verify if this measurement is strictly recorded prior to the target event.",
+      "confidence": 0.95,
+      "ai_summary": null
+    },
+    {
+      "id": "F-D301",
+      "type": "distribution_drift",
+      "severity": "WARNING",
+      "column": "cancellation_survey_score",
+      "title": "Moderate Distribution Drift in 'cancellation_survey_score' (PSI=0.126)",
+      "description": "Feature 'cancellation_survey_score' exhibits significant distribution shift (PSI = 0.126, threshold = 0.25). Sequential Index Partition (70% Baseline / 30% Evaluation).",
+      "evidence": {
+        "psi": 0.1264,
+        "ks_statistic": 0.0672,
+        "ks_p_value": 0.8377,
+        "partition_strategy": "Sequential Index Partition (70% Baseline / 30% Evaluation)",
+        "top_divergent_bins": [
+          {
+            "bin_label": "[0.74, 0.9)",
+            "expected_pct": 0.08,
+            "actual_pct": 0.027,
+            "psi_contribution": 0.0575
+          },
+          {
+            "bin_label": "[-inf, 0.74)",
+            "expected_pct": 0.1018,
+            "actual_pct": 0.1622,
+            "psi_contribution": 0.0281
+          },
+          {
+            "bin_label": "[1.2, 1.3)",
+            "expected_pct": 0.0727,
+            "actual_pct": 0.045,
+            "psi_contribution": 0.0133
+          }
+        ]
+      },
+      "recommendation": "Implement covariate shift adaptation, sample reweighting, or retrain models using time-decayed sample weights for 'cancellation_survey_score'.",
+      "confidence": 0.9,
+      "ai_summary": null
+    }
+  ],
+  "experiments": [
+    {
+      "id": "EXP-001",
+      "name": "Baseline Model Benchmark",
+      "category": "baseline",
+      "description": "Controlled baseline Random Forest model evaluated with stratified K-Fold cross-validation.",
+      "model_name": "RandomForest (CV=5)",
+      "baseline_metric_name": "ROC-AUC",
+      "baseline_score": 0.9933,
+      "modified_score": 0.9933,
+      "delta": 0.0,
+      "delta_pct": 0.0,
+      "status": "baseline",
+      "notes": "Reference benchmark score prior to applying remediations.",
+      "detailed_metrics": {
+        "accuracy": 0.9808,
+        "f1_weighted": 0.9809,
+        "precision_weighted": 0.9809,
+        "recall_weighted": 0.9808,
+        "roc_auc": 0.9933
+      }
+    },
+    {
+      "id": "EXP-002",
+      "name": "Remove Leaky Features",
+      "category": "target_leakage",
+      "description": "Retrain baseline excluding detected leaky feature(s): refund_issued_after_churn.",
+      "model_name": "RandomForest (CV=5)",
+      "baseline_metric_name": "ROC-AUC",
+      "baseline_score": 0.9933,
+      "modified_score": 0.9656,
+      "delta": -0.0277,
+      "delta_pct": -2.79,
+      "status": "neutral",
+      "notes": "Exclusion of ['refund_issued_after_churn'] maintained model performance at realistic baseline.",
+      "detailed_metrics": {
+        "accuracy": 0.9467,
+        "f1_weighted": 0.9453,
+        "precision_weighted": 0.9506,
+        "recall_weighted": 0.9467,
+        "roc_auc": 0.9656
+      }
+    },
+    {
+      "id": "EXP-003",
+      "name": "Imputation Strategy: Mean vs Median",
+      "category": "missingness",
+      "description": "Evaluate model sensitivity to mean vs robust median imputation.",
+      "model_name": "RandomForest (CV=5)",
+      "baseline_metric_name": "ROC-AUC",
+      "baseline_score": 0.9656,
+      "modified_score": 1.0,
+      "delta": 0.0344,
+      "delta_pct": 3.56,
+      "status": "improved",
+      "notes": "Comparing Mean vs Median imputation across missing columns ['total_charges', 'cancellation_survey_score'].",
+      "detailed_metrics": {
+        "accuracy": 0.9992,
+        "f1_weighted": 0.9992,
+        "precision_weighted": 0.9992,
+        "recall_weighted": 0.9992,
+        "roc_auc": 1.0
+      }
+    }
+  ],
+  "drift_summary": [
+    {
+      "feature": "gender",
+      "psi": 0.0086,
+      "ks_statistic": null,
+      "ks_p_value": null,
+      "is_drift_detected": false,
+      "severity": "INFO",
+      "bin_details": [
+        {
+          "bin_label": "Female",
+          "expected_pct": 0.5131,
+          "actual_pct": 0.4667,
+          "psi_contribution": 0.0044
+        },
+        {
+          "bin_label": "Male",
+          "expected_pct": 0.4869,
+          "actual_pct": 0.5333,
+          "psi_contribution": 0.0042
+        }
+      ]
+    },
+    {
+      "feature": "age",
+      "psi": 0.0358,
+      "ks_statistic": 0.0615,
+      "ks_p_value": 0.2851,
+      "is_drift_detected": false,
+      "severity": "INFO",
+      "bin_details": [
+        {
+          "bin_label": "[-inf, 24.0)",
+          "expected_pct": 0.0976,
+          "actual_pct": 0.1111,
+          "psi_contribution": 0.0017
+        },
+        {
+          "bin_label": "[24.0, 29.8)",
+          "expected_pct": 0.1024,
+          "actual_pct": 0.1056,
+          "psi_contribution": 0.0001
+        },
+        {
+          "bin_label": "[29.8, 36.0)",
+          "expected_pct": 0.0929,
+          "actual_pct": 0.1333,
+          "psi_contribution": 0.0146
+        },
+        {
+          "bin_label": "[36.0, 42.0)",
+          "expected_pct": 0.1012,
+          "actual_pct": 0.0833,
+          "psi_contribution": 0.0035
+        },
+        {
+          "bin_label": "[42.0, 47.0)",
+          "expected_pct": 0.0976,
+          "actual_pct": 0.1083,
+          "psi_contribution": 0.0011
+        },
+        {
+          "bin_label": "[47.0, 53.0)",
+          "expected_pct": 0.106,
+          "actual_pct": 0.1139,
+          "psi_contribution": 0.0006
+        },
+        {
+          "bin_label": "[53.0, 58.0)",
+          "expected_pct": 0.1012,
+          "actual_pct": 0.0778,
+          "psi_contribution": 0.0062
+        },
+        {
+          "bin_label": "[58.0, 64.0)",
+          "expected_pct": 0.0976,
+          "actual_pct": 0.1,
+          "psi_contribution": 0.0001
+        },
+        {
+          "bin_label": "[64.0, 69.0)",
+          "expected_pct": 0.0964,
+          "actual_pct": 0.0833,
+          "psi_contribution": 0.0019
+        },
+        {
+          "bin_label": "[69.0, +inf)",
+          "expected_pct": 0.1071,
+          "actual_pct": 0.0833,
+          "psi_contribution": 0.006
+        }
+      ]
+    },
+    {
+      "feature": "tenure_months",
+      "psi": 0.0244,
+      "ks_statistic": 0.075,
+      "ks_p_value": 0.112,
+      "is_drift_detected": false,
+      "severity": "INFO",
+      "bin_details": [
+        {
+          "bin_label": "[-inf, 7.0)",
+          "expected_pct": 0.0917,
+          "actual_pct": 0.075,
+          "psi_contribution": 0.0033
+        },
+        {
+          "bin_label": "[7.0, 14.0)",
+          "expected_pct": 0.1071,
+          "actual_pct": 0.0944,
+          "psi_contribution": 0.0016
+        },
+        {
+          "bin_label": "[14.0, 20.0)",
+          "expected_pct": 0.0857,
+          "actual_pct": 0.0889,
+          "psi_contribution": 0.0001
+        },
+        {
+          "bin_label": "[20.0, 26.0)",
+          "expected_pct": 0.106,
+          "actual_pct": 0.0889,
+          "psi_contribution": 0.003
+        },
+        {
+          "bin_label": "[26.0, 33.0)",
+          "expected_pct": 0.0976,
+          "actual_pct": 0.075,
+          "psi_contribution": 0.006
+        },
+        {
+          "bin_label": "[33.0, 41.0)",
+          "expected_pct": 0.1071,
+          "actual_pct": 0.1333,
+          "psi_contribution": 0.0057
+        },
+        {
+          "bin_label": "[41.0, 48.0)",
+          "expected_pct": 0.1036,
+          "actual_pct": 0.1111,
+          "psi_contribution": 0.0005
+        },
+        {
+          "bin_label": "[48.0, 55.0)",
+          "expected_pct": 0.0869,
+          "actual_pct": 0.0972,
+          "psi_contribution": 0.0012
+        },
+        {
+          "bin_label": "[55.0, 63.0)",
+          "expected_pct": 0.1048,
+          "actual_pct": 0.1083,
+          "psi_contribution": 0.0001
+        },
+        {
+          "bin_label": "[63.0, +inf)",
+          "expected_pct": 0.1095,
+          "actual_pct": 0.1278,
+          "psi_contribution": 0.0028
+        }
+      ]
+    },
+    {
+      "feature": "monthly_charges",
+      "psi": 0.058,
+      "ks_statistic": 0.0397,
+      "ks_p_value": 0.8081,
+      "is_drift_detected": false,
+      "severity": "INFO",
+      "bin_details": [
+        {
+          "bin_label": "[-inf, 28.0)",
+          "expected_pct": 0.1,
+          "actual_pct": 0.0861,
+          "psi_contribution": 0.0021
+        },
+        {
+          "bin_label": "[28.0, 40.52)",
+          "expected_pct": 0.1,
+          "actual_pct": 0.1139,
+          "psi_contribution": 0.0018
+        },
+        {
+          "bin_label": "[40.52, 49.79)",
+          "expected_pct": 0.1,
+          "actual_pct": 0.1,
+          "psi_contribution": 0.0
+        },
+        {
+          "bin_label": "[49.79, 59.6)",
+          "expected_pct": 0.1,
+          "actual_pct": 0.1,
+          "psi_contribution": 0.0
+        },
+        {
+          "bin_label": "[59.6, 69.26)",
+          "expected_pct": 0.1,
+          "actual_pct": 0.0694,
+          "psi_contribution": 0.0111
+        },
+        {
+          "bin_label": "[69.26, 80.35)",
+          "expected_pct": 0.1,
+          "actual_pct": 0.1056,
+          "psi_contribution": 0.0003
+        },
+        {
+          "bin_label": "[80.35, 90.38)",
+          "expected_pct": 0.1,
+          "actual_pct": 0.1306,
+          "psi_contribution": 0.0081
+        },
+        {
+          "bin_label": "[90.38, 98.93)",
+          "expected_pct": 0.1,
+          "actual_pct": 0.075,
+          "psi_contribution": 0.0072
+        },
+        {
+          "bin_label": "[98.93, 110.29)",
+          "expected_pct": 0.1,
+          "actual_pct": 0.1472,
+          "psi_contribution": 0.0183
+        },
+        {
+          "bin_label": "[110.29, +inf)",
+          "expected_pct": 0.1,
+          "actual_pct": 0.0722,
+          "psi_contribution": 0.009
+        }
+      ]
+    },
+    {
+      "feature": "total_charges",
+      "psi": 0.0208,
+      "ks_statistic": 0.0559,
+      "ks_p_value": 0.4802,
+      "is_drift_detected": false,
+      "severity": "INFO",
+      "bin_details": [
+        {
+          "bin_label": "[-inf, 410.56)",
+          "expected_pct": 0.1006,
+          "actual_pct": 0.0927,
+          "psi_contribution": 0.0006
+        },
+        {
+          "bin_label": "[410.56, 705.74)",
+          "expected_pct": 0.0992,
+          "actual_pct": 0.0735,
+          "psi_contribution": 0.0077
+        },
+        {
+          "bin_label": "[705.74, 1107.09)",
+          "expected_pct": 0.1006,
+          "actual_pct": 0.1054,
+          "psi_contribution": 0.0002
+        },
+        {
+          "bin_label": "[1107.09, 1483.13)",
+          "expected_pct": 0.0992,
+          "actual_pct": 0.0863,
+          "psi_contribution": 0.0018
+        },
+        {
+          "bin_label": "[1483.13, 1926.74)",
+          "expected_pct": 0.1006,
+          "actual_pct": 0.1118,
+          "psi_contribution": 0.0012
+        },
+        {
+          "bin_label": "[1926.74, 2416.1)",
+          "expected_pct": 0.0992,
+          "actual_pct": 0.0831,
+          "psi_contribution": 0.0029
+        },
+        {
+          "bin_label": "[2416.1, 3171.02)",
+          "expected_pct": 0.1006,
+          "actual_pct": 0.115,
+          "psi_contribution": 0.0019
+        },
+        {
+          "bin_label": "[3171.02, 4082.73)",
+          "expected_pct": 0.0992,
+          "actual_pct": 0.1118,
+          "psi_contribution": 0.0015
+        },
+        {
+          "bin_label": "[4082.73, 5121.79)",
+          "expected_pct": 0.1006,
+          "actual_pct": 0.1022,
+          "psi_contribution": 0.0
+        },
+        {
+          "bin_label": "[5121.79, +inf)",
+          "expected_pct": 0.1006,
+          "actual_pct": 0.1182,
+          "psi_contribution": 0.0029
+        }
+      ]
+    },
+    {
+      "feature": "contract_type",
+      "psi": 0.0006,
+      "ks_statistic": null,
+      "ks_p_value": null,
+      "is_drift_detected": false,
+      "severity": "INFO",
+      "bin_details": [
+        {
+          "bin_label": "Month-to-Month",
+          "expected_pct": 0.5583,
+          "actual_pct": 0.5472,
+          "psi_contribution": 0.0002
+        },
+        {
+          "bin_label": "One-Year",
+          "expected_pct": 0.25,
+          "actual_pct": 0.2528,
+          "psi_contribution": 0.0
+        },
+        {
+          "bin_label": "Two-Year",
+          "expected_pct": 0.1917,
+          "actual_pct": 0.2,
+          "psi_contribution": 0.0004
+        }
+      ]
+    },
+    {
+      "feature": "tech_support_calls",
+      "psi": 0.0057,
+      "ks_statistic": 0.0266,
+      "ks_p_value": 0.9923,
+      "is_drift_detected": false,
+      "severity": "INFO",
+      "bin_details": [
+        {
+          "bin_label": "[-inf, 1.0)",
+          "expected_pct": 0.2238,
+          "actual_pct": 0.2389,
+          "psi_contribution": 0.001
+        },
+        {
+          "bin_label": "[1.0, 2.0)",
+          "expected_pct": 0.3405,
+          "actual_pct": 0.3444,
+          "psi_contribution": 0.0
+        },
+        {
+          "bin_label": "[2.0, 3.0)",
+          "expected_pct": 0.2619,
+          "actual_pct": 0.2694,
+          "psi_contribution": 0.0002
+        },
+        {
+          "bin_label": "[3.0, +inf)",
+          "expected_pct": 0.1738,
+          "actual_pct": 0.1472,
+          "psi_contribution": 0.0044
+        }
+      ]
+    },
+    {
+      "feature": "refund_issued_after_churn",
+      "psi": 0.0,
+      "ks_statistic": 0.027,
+      "ks_p_value": 0.9908,
+      "is_drift_detected": false,
+      "severity": "INFO",
+      "bin_details": [
+        {
+          "bin_label": "[-inf, +inf)",
+          "expected_pct": 1.0,
+          "actual_pct": 1.0,
+          "psi_contribution": 0.0
+        }
+      ]
+    },
+    {
+      "feature": "cancellation_survey_score",
+      "psi": 0.1264,
+      "ks_statistic": 0.0672,
+      "ks_p_value": 0.8377,
+      "is_drift_detected": true,
+      "severity": "WARNING",
+      "bin_details": [
+        {
+          "bin_label": "[-inf, 0.74)",
+          "expected_pct": 0.1018,
+          "actual_pct": 0.1622,
+          "psi_contribution": 0.0281
+        },
+        {
+          "bin_label": "[0.74, 0.9)",
+          "expected_pct": 0.08,
+          "actual_pct": 0.027,
+          "psi_contribution": 0.0575
+        },
+        {
+          "bin_label": "[0.9, 1.0)",
+          "expected_pct": 0.1091,
+          "actual_pct": 0.1441,
+          "psi_contribution": 0.0098
+        },
+        {
+          "bin_label": "[1.0, 1.1)",
+          "expected_pct": 0.0473,
+          "actual_pct": 0.0721,
+          "psi_contribution": 0.0105
+        },
+        {
+          "bin_label": "[1.1, 1.2)",
+          "expected_pct": 0.1455,
+          "actual_pct": 0.1441,
+          "psi_contribution": 0.0
+        },
+        {
+          "bin_label": "[1.2, 1.3)",
+          "expected_pct": 0.0727,
+          "actual_pct": 0.045,
+          "psi_contribution": 0.0133
+        },
+        {
+          "bin_label": "[1.3, 1.4)",
+          "expected_pct": 0.0982,
+          "actual_pct": 0.0901,
+          "psi_contribution": 0.0007
+        },
+        {
+          "bin_label": "[1.4, 1.5)",
+          "expected_pct": 0.1018,
+          "actual_pct": 0.0811,
+          "psi_contribution": 0.0047
+        },
+        {
+          "bin_label": "[1.5, 1.7)",
+          "expected_pct": 0.1309,
+          "actual_pct": 0.1351,
+          "psi_contribution": 0.0001
+        },
+        {
+          "bin_label": "[1.7, +inf)",
+          "expected_pct": 0.1127,
+          "actual_pct": 0.0991,
+          "psi_contribution": 0.0018
+        }
+      ]
+    }
+  ],
+  "slice_summary": [
+    {
+      "feature": "gender",
+      "slice_value": "Male",
+      "sample_count": 601,
+      "sample_pct": 0.5008,
+      "metric_name": "F1-Score",
+      "slice_score": 0.98,
+      "overall_score": 0.9809,
+      "disparity_ratio": 0.999,
+      "is_disparate": false
+    },
+    {
+      "feature": "gender",
+      "slice_value": "Female",
+      "sample_count": 599,
+      "sample_pct": 0.4992,
+      "metric_name": "F1-Score",
+      "slice_score": 0.9817,
+      "overall_score": 0.9809,
+      "disparity_ratio": 1.001,
+      "is_disparate": false
+    },
+    {
+      "feature": "age_quantile",
+      "slice_value": "Low",
+      "sample_count": 405,
+      "sample_pct": 0.3375,
+      "metric_name": "F1-Score",
+      "slice_score": 0.9828,
+      "overall_score": 0.9809,
+      "disparity_ratio": 1.002,
+      "is_disparate": false
+    },
+    {
+      "feature": "age_quantile",
+      "slice_value": "Medium",
+      "sample_count": 400,
+      "sample_pct": 0.3333,
+      "metric_name": "F1-Score",
+      "slice_score": 0.9825,
+      "overall_score": 0.9809,
+      "disparity_ratio": 1.002,
+      "is_disparate": false
+    },
+    {
+      "feature": "age_quantile",
+      "slice_value": "High",
+      "sample_count": 395,
+      "sample_pct": 0.3292,
+      "metric_name": "F1-Score",
+      "slice_score": 0.9772,
+      "overall_score": 0.9809,
+      "disparity_ratio": 0.996,
+      "is_disparate": false
+    },
+    {
+      "feature": "tenure_months_quantile",
+      "slice_value": "Medium",
+      "sample_count": 400,
+      "sample_pct": 0.3333,
+      "metric_name": "F1-Score",
+      "slice_score": 0.98,
+      "overall_score": 0.9809,
+      "disparity_ratio": 0.999,
+      "is_disparate": false
+    },
+    {
+      "feature": "tenure_months_quantile",
+      "slice_value": "Low",
+      "sample_count": 405,
+      "sample_pct": 0.3375,
+      "metric_name": "F1-Score",
+      "slice_score": 0.9827,
+      "overall_score": 0.9809,
+      "disparity_ratio": 1.002,
+      "is_disparate": false
+    },
+    {
+      "feature": "tenure_months_quantile",
+      "slice_value": "High",
+      "sample_count": 395,
+      "sample_pct": 0.3292,
+      "metric_name": "F1-Score",
+      "slice_score": 0.98,
+      "overall_score": 0.9809,
+      "disparity_ratio": 0.999,
+      "is_disparate": false
+    },
+    {
+      "feature": "contract_type",
+      "slice_value": "Month-to-Month",
+      "sample_count": 666,
+      "sample_pct": 0.555,
+      "metric_name": "F1-Score",
+      "slice_score": 0.9835,
+      "overall_score": 0.9809,
+      "disparity_ratio": 1.003,
+      "is_disparate": false
+    },
+    {
+      "feature": "contract_type",
+      "slice_value": "One-Year",
+      "sample_count": 301,
+      "sample_pct": 0.2508,
+      "metric_name": "F1-Score",
+      "slice_score": 0.9669,
+      "overall_score": 0.9809,
+      "disparity_ratio": 0.986,
+      "is_disparate": false
+    },
+    {
+      "feature": "contract_type",
+      "slice_value": "Two-Year",
+      "sample_count": 233,
+      "sample_pct": 0.1942,
+      "metric_name": "F1-Score",
+      "slice_score": 0.9914,
+      "overall_score": 0.9809,
+      "disparity_ratio": 1.011,
+      "is_disparate": false
+    },
+    {
+      "feature": "tech_support_calls",
+      "slice_value": "1",
+      "sample_count": 410,
+      "sample_pct": 0.3417,
+      "metric_name": "F1-Score",
+      "slice_score": 0.983,
+      "overall_score": 0.9809,
+      "disparity_ratio": 1.002,
+      "is_disparate": false
+    },
+    {
+      "feature": "tech_support_calls",
+      "slice_value": "2",
+      "sample_count": 317,
+      "sample_pct": 0.2642,
+      "metric_name": "F1-Score",
+      "slice_score": 0.9874,
+      "overall_score": 0.9809,
+      "disparity_ratio": 1.007,
+      "is_disparate": false
+    },
+    {
+      "feature": "tech_support_calls",
+      "slice_value": "0",
+      "sample_count": 274,
+      "sample_pct": 0.2283,
+      "metric_name": "F1-Score",
+      "slice_score": 0.9742,
+      "overall_score": 0.9809,
+      "disparity_ratio": 0.993,
+      "is_disparate": false
+    },
+    {
+      "feature": "tech_support_calls",
+      "slice_value": "3",
+      "sample_count": 142,
+      "sample_pct": 0.1183,
+      "metric_name": "F1-Score",
+      "slice_score": 0.979,
+      "overall_score": 0.9809,
+      "disparity_ratio": 0.998,
+      "is_disparate": false
+    },
+    {
+      "feature": "tech_support_calls",
+      "slice_value": "4",
+      "sample_count": 43,
+      "sample_pct": 0.0358,
+      "metric_name": "F1-Score",
+      "slice_score": 0.9765,
+      "overall_score": 0.9809,
+      "disparity_ratio": 0.996,
+      "is_disparate": false
+    },
+    {
+      "feature": "refund_issued_after_churn",
+      "slice_value": "0",
+      "sample_count": 834,
+      "sample_pct": 0.695,
+      "metric_name": "F1-Score",
+      "slice_score": 0.9898,
+      "overall_score": 0.9809,
+      "disparity_ratio": 1.009,
+      "is_disparate": false
+    },
+    {
+      "feature": "refund_issued_after_churn",
+      "slice_value": "1",
+      "sample_count": 366,
+      "sample_pct": 0.305,
+      "metric_name": "F1-Score",
+      "slice_score": 0.9416,
+      "overall_score": 0.9809,
+      "disparity_ratio": 0.96,
+      "is_disparate": false
+    },
+    {
+      "feature": "cancellation_survey_score_quantile",
+      "slice_value": "Low",
+      "sample_count": 138,
+      "sample_pct": 0.3575,
+      "metric_name": "F1-Score",
+      "slice_score": 1.0,
+      "overall_score": 0.9809,
+      "disparity_ratio": 1.02,
+      "is_disparate": false
+    },
+    {
+      "feature": "cancellation_survey_score_quantile",
+      "slice_value": "Medium",
+      "sample_count": 155,
+      "sample_pct": 0.4016,
+      "metric_name": "F1-Score",
+      "slice_score": 0.9807,
+      "overall_score": 0.9809,
+      "disparity_ratio": 1.0,
+      "is_disparate": false
+    },
+    {
+      "feature": "cancellation_survey_score_quantile",
+      "slice_value": "High",
+      "sample_count": 93,
+      "sample_pct": 0.2409,
+      "metric_name": "F1-Score",
+      "slice_score": 0.9678,
+      "overall_score": 0.9809,
+      "disparity_ratio": 0.987,
+      "is_disparate": false
+    }
+  ],
+  "executive_summary": "Dataset Autopilot audited 1,200 rows and 11 columns with overall Data Health Score of 85.5/100 (Grade: A). CRITICAL ATTENTION: 3 high-severity issue(s) identified that pose immediate risk to model integrity. Target Leakage: Features ['refund_issued_after_churn'] show suspicious predictive dominance or post-event properties. Distribution Drift: Significant shift (PSI >= 0.25) observed across 1 feature(s). Remediation Impact: Removing suspect leaky features caused baseline ROC-AUC to shift from 0.993 to 0.966 (Exclusion of ['refund_issued_after_churn'] maintained model performance at realistic baseline.)."
+}
