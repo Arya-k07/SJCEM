@@ -1,0 +1,11 @@
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+.env
+outputs/
+cleaned_dataset.csv
+rejected_dataset.csv
+preprocessing_report.json
+backend/tests/datasets/*
+!backend/tests/datasets/.gitkeep
