@@ -1,6 +1,6 @@
 import type { FeedbackRecord, Insights } from "../types";
 
-const baseUrl = (import.meta.env.VITE_API_BASE_URL || "http://localhost:8000").replace(/\/$/, "");
+const baseUrl = (import.meta.env.VITE_API_BASE_URL || "http://localhost:8001").replace(/\/$/, "");
 async function request<T>(path: string, init?: RequestInit): Promise<T> {
   const response = await fetch(`${baseUrl}${path}`, { ...init, headers: { "Content-Type": "application/json", ...(init?.headers || {}) } });
   if (!response.ok) throw new Error((await response.json().catch(() => null))?.detail || `Request failed (${response.status})`);
