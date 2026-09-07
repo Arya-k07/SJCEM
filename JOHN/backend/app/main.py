@@ -8,6 +8,7 @@ from tempfile import NamedTemporaryFile
 from uuid import uuid4
 
 from fastapi import FastAPI, File, HTTPException, UploadFile
+from pydantic import BaseModel, Field
 
 from app.preprocessing import (
 	export_cleaned_dataset as write_cleaned_dataset,
@@ -17,8 +18,17 @@ from app.preprocessing import (
 	clean_dataset,
 )
 from app.nlp import analyze_dataset, export_analyzed_dataset
+from app.decision.graph import run_decision
+from app.decision.schemas import AnalyzedFeedback, DecisionResponse
+from app.insights.node import generate_dataset_insights
+from app.insights.schemas import DatasetInsights
 
 app = FastAPI(title="FeedbackIQ Preprocessing API", version="0.1.0")
+
+
+class InsightsRequest(BaseModel):
+    records: list[dict] = Field(default_factory=list)
+    domain: str | None = None
 
 
 @app.get("/")
@@ -119,6 +129,20 @@ async def analyze(file: UploadFile = File(...)) -> dict:
 		"analyzed_file": analyzed_path,
 		"data": json.loads(analyzed.to_json(orient="records", date_format="iso")),
 	}
+
+
+@app.post("/api/decision", response_model=DecisionResponse)
+async def decision(record: AnalyzedFeedback) -> dict:
+	"""Run the decision layer on one already-analyzed feedback record."""
+	return run_decision(record.model_dump(exclude_none=True))
+
+
+@app.post("/api/insights", response_model=DatasetInsights)
+async def insights(request: InsightsRequest) -> DatasetInsights:
+	"""Generate dataset-level insights from analyzed or decision-enriched records."""
+	if not request.records:
+		raise HTTPException(status_code=400, detail="At least one record is required.")
+	return generate_dataset_insights(request.records, domain=request.domain)
 
 
 __all__ = ["app", "clean_dataset"]
